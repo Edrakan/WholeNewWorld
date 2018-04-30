@@ -2,33 +2,45 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+define mouton = DynamicCharacter("nom_mouton")
+define maitre = DynamicCharacter("nom_maitre")
+define loupun = DynamicCharacter("nom_loup_un")
+define loupdeux = DynamicCharacter("nom_loup_deux")
+define mainchara = DynamicCharacter("nom_perso")
 
-define e = Character("Eileen")
 
 
 # The game starts here.
 
 label start:
+    $ nom_mouton = "???"
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+
+    scene black
+    with dissolve
+
+    mouton "Bienvenue."
 
     scene bg ecrantitre
+    with fade
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    #show eileen happy
     show mouton
 
-    # These display lines of dialogue.
+    mouton "J'espère que tu n'as pas trop peur et que tu vas bien !"
+    mouton "C'est moi, Mouton ! Je vais te montrer un peu comment ça fonctionne."
 
-    e "You've created a new Ren'Py game."
+    $ nom_mouton = "Mouton"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    mouton "Ne bouge pas, tout va bien se passer. Tu te rappelles au moins de ton nom ?"
+
+    $ nom_perso = renpy.input("Bien sûr ! Mon nom est... ")
+
+    $ nom_perso = nom_perso.strip()
+    if nom_perso == "":
+        $ nom_perso="Sam"
+
+
+    mainchara "Evidemment !"
 
     # This ends the game.
-
     return
