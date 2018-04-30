@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 43, in script
-    
-NameError: name 'nom_perso' is not defined
+  File "game/script.rpy", line 103, in script
+    scene black
+NameError: name 'nom_maitre' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 43, in script
-    
+  File "game/script.rpy", line 103, in script
+    scene black
   File "/Applications/renpy-6.99.14.3-sdk/renpy/ast.py", line 652, in execute
     renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
   File "/Applications/renpy-6.99.14.3-sdk/renpy/exports.py", line 1180, in say
@@ -21,9 +21,9 @@ Full traceback:
   File "/Applications/renpy-6.99.14.3-sdk/renpy/python.py", line 1912, in py_eval_bytecode
     return eval(bytecode, globals, locals)
   File "<none>", line 1, in <module>
-NameError: name 'nom_perso' is not defined
+NameError: name 'nom_maitre' is not defined
 
 Darwin-15.5.0-x86_64-i386-64bit
 Ren'Py 6.99.14.3.3347
 WholeNewWorld 1.0
-Mon Apr 30 22:05:33 2018
+Mon Apr 30 23:31:53 2018
