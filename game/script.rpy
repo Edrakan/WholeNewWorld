@@ -1,22 +1,47 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
 # %(nom_perso)s - permet de mettre la variable du nom dedans. Ne pas oublier le s à la fin.
-
-define mouton = DynamicCharacter("nom_mouton")
-define maitre = DynamicCharacter("nom_maitre")
-define loupun = DynamicCharacter("nom_loup_un")
-define loupdeux = DynamicCharacter("nom_loup_deux")
-define mainchara = DynamicCharacter("nom_perso")
-
-
 
 # Première partie : Découverte
 label start:
     $ nom_mouton = "???"
 
+#    screen main :
+#        imagemap :
+#            ground "images/mouton_norm.png"
+#            idle "images/mouton_idl.png"
+#            hover "images/mouton_hover.png"
+#
+#        hotspot(10, 10, 1000, 1000)
+#
+#    show main
+
+    scene bg grange
+
+    mouton "eh"
+
+
+    image machin:
+        on idle :
+            "moutonidle.png"
+        on hovered :
+            "moutonhover.png"
+        on unhovered :
+            "moutonidle.png"
+
+#    button:
+#        xysize (300, 80)     # to do: adjust the size width and height to match the size of the image
+#        add "start_button"
+#        action Start()
+
+    show machin
+    mouton "eh2"
+
+
+#    imagebutton auto "mouton_idle.png" hovered("mouton_hover.png")
+
+
+    #show mouton_bis
 
     scene black
     with dissolve
@@ -67,9 +92,9 @@ label start:
     mouton "Eh bien... Regarde ces échymoses sur tes flancs... C'est pas jojo à voir, je te le promets...
     Tu te rappelles au moins de comment tu t'appelles, n'est-ce pas ?"
 
-    $ nom_perso = "???"
+    $ nom_perso = ""
 
-    $ nom_perso = renpy.input("... Je crois que c'est...")
+    $ nom_perso = renpy.input("... Je crois que c'est...", "Barbara")
 
     $ nom_perso = nom_perso.strip()
     if nom_perso == "":

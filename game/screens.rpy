@@ -354,9 +354,15 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
+    # The background of the main menu.
+    window:
+        xpadding 0
+        ypadding -535
+        add "menu_anime"
+
     style_prefix "main_menu"
 
-    add gui.main_menu_background
+    #add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
     frame:
@@ -1509,8 +1515,3 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
-
-
-
-
-

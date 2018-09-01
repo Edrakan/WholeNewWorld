@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 39: if statement expects a non-empty block.
-    if player_name == "":
-                         ^
+The label reponsemoutontete is defined twice, at
+  File "game/script.rpy", line 118 and
+  File "game/script2.rpy", line 1.
 
-Ren'Py Version: Ren'Py 6.99.14.3.3347
-Mon Apr 30 22:04:21 2018
+The label suitemouton is defined twice, at
+  File "game/script.rpy", line 122 and
+  File "game/script2.rpy", line 5.
+
+Ren'Py Version: Ren'Py 7.0.0.196
+Sat Sep  1 12:44:08 2018
